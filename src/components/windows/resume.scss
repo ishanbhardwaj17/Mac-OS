@@ -1,0 +1,23 @@
+.resume-window {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; // Prevents the container from scrolling
+
+    /* Ensure no scrollbars appear on the container */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    embed {
+        width: 100%;
+        height: 100%;
+        border: none;
+        
+        /* Note: Chrome's PDF viewer ignores CSS scrollbar rules. 
+           To hide the PDF toolbar/scrollbar specifically, 
+           use the #view=FitH suffix in your JSX src attribute.
+        */
+    }
+}
